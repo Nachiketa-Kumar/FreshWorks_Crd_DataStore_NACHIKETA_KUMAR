@@ -31,7 +31,7 @@ def DataFile_Creation(key,val,timeframe=0,f1='JsonDataFile.json'):
                 print("------There is an Error as-> ",key," pre-exists in the Datafile-----") 
             else:
                 if(key.isalpha()):
-                    if(len(d2)<(1024*1020*1024) and val<=(16*1024*1024)): #file size less than 1GB and JSON object value less than 16KB 
+                    if(len(d2)<(1024*1020*1024) and val<=(16*1024*1024)): #for files having sizes less than 1 GB and JSON key objects less than or equal to 16 kb only!  
                         if(timeframe==0):
                             l1=[val,timeframe]
                         else:
