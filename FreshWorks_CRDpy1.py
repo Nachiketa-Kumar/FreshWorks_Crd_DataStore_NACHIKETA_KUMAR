@@ -48,7 +48,7 @@ def DataFile_Creation(key,val,timeframe=0,f1='JsonDataFile.json'):
         else:
             d2={}
             if(key.isalpha()):
-                    if(val<=(16*1024*1024)): #file size less than 1GB and JSON object value less than 16KB 
+                    if(val<=(16*1024*1024)): # for files having sizes less than 1 GB and JSON key objects less than or equal to 16 kb only! 
                         if(timeframe==0):
                             l1=[val,timeframe]
                         else:
